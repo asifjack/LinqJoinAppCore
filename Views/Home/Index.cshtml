@@ -1,0 +1,26 @@
+﻿@model IEnumerable<LinqJoinAppCore.Models.ModelViewForInvoice>
+
+    <div class="container-fluid py-4">
+        <h4 class="text-center text-uppercase">Employee List</h4>
+        <table class="table table-striped table-bordered">
+            <thead class="bg-dark text-white">
+                <tr>
+                    <th>Name</th>
+                 
+                    <th>Department</th>
+                    <th>Incentive</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.DepartmentName</td>
+                        <td>@item.IncentiveAmount</td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+    </div>
